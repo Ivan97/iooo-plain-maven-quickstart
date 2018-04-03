@@ -41,14 +41,32 @@
   <properties>
     <!-- project properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- dependency properties -->
+    <vertx.version>3.5.1</vertx.version>
     <!-- plugin properties -->
     <maven-archetype-plugin.version>3.0.1</maven-archetype-plugin.version>
   </properties>
+  
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>vertx-dependencies</artifactId>
+        <version>${vertx.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
       <groupId>tech.iooo.boot</groupId>
       <artifactId>iooo-boot-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-core</artifactId>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
