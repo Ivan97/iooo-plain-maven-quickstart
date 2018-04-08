@@ -24,7 +24,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <logback.level>debug</logback.level>
+        <logback.level>DEBUG</logback.level>
       </properties>
     </profile>
     <profile>
@@ -33,7 +33,7 @@
         <activeByDefault>false</activeByDefault>
       </activation>
       <properties>
-        <logback.level>info</logback.level>
+        <logback.level>INFO</logback.level>
       </properties>
     </profile>
   </profiles>
@@ -71,6 +71,15 @@
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
